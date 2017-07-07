@@ -11,7 +11,22 @@
 		8BCC25A51F09FCF500A67714 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC25A41F09FCF500A67714 /* ViewController.swift */; };
 		8BCC25A71F09FCF500A67714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCC25A61F09FCF500A67714 /* Assets.xcassets */; };
 		8BCC25AA1F09FCF500A67714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BCC25A81F09FCF500A67714 /* Main.storyboard */; };
+		8BCC25B41F0E167400A67714 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCC25B31F0E167400A67714 /* Sparkle.framework */; };
+		8BCC25B61F0E17C500A67714 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BCC25B31F0E167400A67714 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BCC25B51F0E178600A67714 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BCC25B61F0E17C500A67714 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8BCC259F1F09FCF500A67714 /* Unhidy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unhidy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +35,7 @@
 		8BCC25A61F09FCF500A67714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BCC25A91F09FCF500A67714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BCC25AB1F09FCF500A67714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BCC25B31F0E167400A67714 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCC25B41F0E167400A67714 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +55,7 @@
 			children = (
 				8BCC25A11F09FCF500A67714 /* Unhidy */,
 				8BCC25A01F09FCF500A67714 /* Products */,
+				8BCC25B21F0E160F00A67714 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +79,14 @@
 			path = Unhidy;
 			sourceTree = "<group>";
 		};
+		8BCC25B21F0E160F00A67714 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BCC25B31F0E167400A67714 /* Sparkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +97,7 @@
 				8BCC259B1F09FCF500A67714 /* Sources */,
 				8BCC259C1F09FCF500A67714 /* Frameworks */,
 				8BCC259D1F09FCF500A67714 /* Resources */,
+				8BCC25B51F0E178600A67714 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -257,8 +284,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EW7DAAE5F2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Unhidy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danieldbird.Unhidy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -274,8 +305,12 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EW7DAAE5F2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Unhidy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danieldbird.Unhidy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

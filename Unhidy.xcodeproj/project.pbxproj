@@ -337,6 +337,7 @@
 				8BCC25B01F09FCF500A67714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
